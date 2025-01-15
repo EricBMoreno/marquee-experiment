@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link href="marquee.css">
+  </head>
+<body>
+  
+  <header>  
+    <marquee id="carousel" scrollamount="0" role="marquee" aria-live="polite">
+      <section class="slide" id="purpose" aria-labelledby="header-purpose">
+        <div class="content">
+          <h2 id="header-purpose">Purpose:</h2>
+          <p>The goal of this experiment is to create a carousel with the deprecated <code>&lt;marquee&gt;</code> element using as little CSS and JS as possible. The current method of creating a carousel is to create one from scratch or using existing frameworks. Typically such methods use <code>&lt;div&gt;</code>'s combined with ARIA attributes, but a modernized <code>&lt;marquee&gt;</code> could be more semantic.</p>
+        </div>
+      </section>
+    
+      <section class="slide" id="method" aria-labelledby="header-method">
+        <div class="content">
+          <h2 id="header-method">Method:</h2>
+          <p>This carousel uses anchors with fragment identifiers in the 'href' attribute to scroll to the targeted slide. Each slide is simply a separate <code>&lt;section&gt;</code> element, and a <code>&lt;nav&gt;</code> element is used for carousel controls. The <code>&lt;marquee&gt;</code> itself acts as a container for the slides, as it has the appropriate styling by default.</p>
+        </div>
+      </section>
+    
+      <section class="slide" id="setup" aria-labelledby="header-setup">
+        <div class="content">
+          <h2 id="header-setup">Setup:</h2>
+          <p>It seems possible to set up by simply setting the marquee's scrollamount attribute to 0. This allows developers to use an existing element with built-in features to create a carousel rather than having to recreate one from scratch.</p>
+        </div>
+      </section>
+      
+      <section class="slide" id="accessibility" aria-labelledby="header-accessibility">
+        <div class="content">
+          <h2 id="header-accessibility">Accessibility Concerns:</h2>
+          <p>The <code>&lt;marquee&gt;</code> element has the role of 'generic' by default, but there is also a 'marquee' role that can be added by simply adding 'role="marquee"' and the aria-live attribute to inform a screen reader user of when the content updates (e.g. when the slide changes).</p>
+          <p><a href="https://www.w3.org/WAI/tutorials/carousels/">W3C WAI Carousel Tutorial</a></p>
+        </div>
+      </section>
+      
+      <section class="slide" id="other-notes" aria-labelledby="header-other-notes">
+        <div class="content">
+          <h2 id="header-other-notes">Other Notes:</h2>
+          <p>As long as the scrollamount attribute is set to 0, the behavior attribute has no affect whatsoever on the carousel. Using the direction attribute, one can set the carousel to scroll vertically or horizontally, but 'up' and 'down' behave exactly the same, starting at the first slide. Likewise, 'left' and 'right' behave exactly the same.</p>
+        </div>
+      </section>
+      
+      <nav id="carousel-nav" aria-label="Carousel Navigation">
+        <ul> 
+          <li><button class="carousel-control next">&#8680;<span class="sr-only">Next slide</span></button></li>
+          <li><a href="#purpose" title="Purpose"><span class="sr-only">Purpose</span></a></li>
+          <li><a href="#method" title="Method"><span class="sr-only">Method</span></a></li>
+          <li><a href="#setup" title="Setup"><span class="sr-only">Setup</span></a></li>
+          <li><a href="#accessibility" title="Accessibility"><span class="sr-only">Accessibility Concerns</span></a></li>
+          <li><a href="#other-notes" title="Other Notes"><span class="sr-only">Other Notes</span></a></li>
+          <li><button class="carousel-control previous">&#8678;<span class="sr-only">Previous slide</span></button></li> 
+        </ul>
+      </nav>
+      
+    </marquee>  
+  </header>
+</body>
+</html>
