@@ -109,7 +109,8 @@ marquee {
 .slide {
   height: 100%;
   width: 100vw;
-  display: inline-block;
+  display: inline-flex;
+/*   display: inline-block; */
   align-content: center;
   background-size: cover;
   z-index: 1;  
