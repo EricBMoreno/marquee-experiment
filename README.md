@@ -1,5 +1,5 @@
 # &lt;Marquee&gt; Tag Experiment
-An experiment exploring what the &gt;marquee&lt; tag.
+An experiment exploring what the &lt;marquee&gt; tag.
 
 The primary objective of this project is to explore how the <marquee> tag can be used to build a carousel. Secondarily, the project seeks explore what accessibility features &lt;marquee&gt; lacks, and see if said features can be included using ARIA attributes.
 
